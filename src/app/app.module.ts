@@ -6,16 +6,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { ForgotpasswordComponent } from './auth/forgotpassword/forgotpassword.component';
+import { AuthModule } from './auth/auth.module';
+import { UserRegistrationComponent } from './user/userregistration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    ForgotpasswordComponent
+    UserRegistrationComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
