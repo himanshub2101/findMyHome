@@ -51,3 +51,8 @@
 
    ```bash
    git clone https://github.com/your_username/findmyhome.git
+
+2. Install dependencies:
+   ```bash
+   cd findmyhome
+   npm install
