@@ -25,6 +25,7 @@ export const add = async (req, res) => {
             
             var details = {...req.body,"status":1,"iconname":iconname};
             var result=await messSchemaModel.create(details)
+            if(result)
             res.status(200).json({status:"true",msg:"Mess registred successfuly"});
 
         }else{
