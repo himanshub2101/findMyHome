@@ -1,5 +1,5 @@
 # FindMyHome Setup Guide
-
+<!---------------------------------------------------------------------- User  ------------------------------------------------------------------------------>
 ## User Features
 
 ### a) User Registration
@@ -44,8 +44,8 @@
 - **Postman Keys:**
   - email
   - password
-
-## Mes Owner Features
+<!---------------------------------------------------------------------- Mess Owner  ------------------------------------------------------------------------------>
+## Mess Owner Features
 
 ### a) Add Mess Facility
 
@@ -86,7 +86,7 @@
 - **URL:** http://localhost:3001/mess/delete
 - **HTTP Method:** DELETE
 - **Postman Keys:**
-  - 
+  - messname
 
 ### e) Delete Mess Facility
 
@@ -99,50 +99,60 @@
   - email
   - _id
   - password
- 
-## User Features
+ <!---------------------------------------------------------------------- House Owner  ------------------------------------------------------------------------------>
+## House Owner Features
 
-### a) User Registration
+### a) Add House Facility
 
-- **URL:** http://localhost:3001/user/register
+- **URL:** http://localhost:3001/house/add
 - **HTTP Method:** POST
 - **Postman Keys:**
-  - name
+  - housename
+  - pincode
+  - address
+  - service
+  - housetype (Hostel, PG, Flat)
+  - iconname
   - email
-  - password
-  - cnfpassword
+  - token
   - mobile
-  - role (User, MessOwner, Landlord)
+  - description
+  - price
 
-### b) View User Profile
+### b) Fetch House Facility
 
-- **URL:** http://localhost:3001/user/fetch
+- **URL:** http://localhost:3001/house/fetch
 - **HTTP Method:** GET
 - **Postman Keys:**
-  - email
+  - token
+  - pincode
+  - housetype (optional)
 
-### c) Update User Profile
+### c) Update House Facility
 
-- **URL:** http://localhost:3001/user/update
+- **URL:** http://localhost:3001/house/update
 - **HTTP Method:** PATCH
 - **Postman Keys:**
   - condition_obj
   - content_obj
 
-### d) Login User
+### d) Delete House Pic
 
-- **URL:** http://localhost:3001/user/login
-- **HTTP Method:** POST
-- **Postman Keys:**
-  - email
-  - password
-
-### e) Delete User Profile
-
-- **URL:** http://localhost:3001/user/delete
+- **URL:** http://localhost:3001/house/delete
 - **HTTP Method:** DELETE
 - **Postman Keys:**
+  - housename
+
+### e) Delete House Facility
+
+- **URL:** http://localhost:3001/house/delete
+- **HTTP Method:** DELETE
+- **Postman Keys:**
+  - housename
+  - token
+  - pincode
   - email
+  - _id
   - password
 
 ## Getting Started
