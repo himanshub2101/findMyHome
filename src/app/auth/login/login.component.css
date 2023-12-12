@@ -1,10 +1,9 @@
 .body{
-    background-image: url(Screen.png);
+    background-image: url(./image1.png);
     height: 100vh;
     background-size: cover;
 
 }
-
 .form{
     display: flex;
     flex-direction: column;
@@ -13,7 +12,7 @@
     border: 1px solid black;
     align-items: center;
     margin: auto;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(218, 215, 215, 0.279);
     box-shadow: inset -5px -5px rgba(0,0,0,0);
     border-radius: 20px;
     -webkit-border-radius:20px;
@@ -23,14 +22,12 @@
     position: relative;
     top: 200px;
     
-    
-    
 
 }
 .form h2 {
-    color: white;
+    color: black;
     font-size: 1.5rem;
-    border-bottom: 4px solid rgba(255,255,255,0.5);
+    border-bottom: 4px solid black;
 }
 
 .box{
@@ -45,7 +42,6 @@
     -ms-border-radius: 4px;
     background-color: rgba(0,0,0,0.5);
     box-shadow: inset -3px -3px rgba(0,0,0,0.5);
-    color: white;
 
 }
 

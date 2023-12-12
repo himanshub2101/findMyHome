@@ -1,15 +1,15 @@
 <body class="body">
     <form action="" class="form">
         <h2>Sign in</h2>
-        <input type="text" class="box" name="email" required placeholder="Email">
-        <input type="password" class="box" name="password" required placeholder="Password">
+        <input type="text" class="box" name="email" required placeholder="Email" [(ngModel)]="signinObj.email">
+        <input type="password" class="box" name="password" required placeholder="Password" [(ngModel)]="signinObj.password">
 
         <div class="forgotpassword">
-            <a  href="./forgotpassword">forgotpassword ?</a>
+            <a href="./forgotpassword">forgotpassword ?</a>
         </div>
 
-        <input type="submit" value="sign in" id="submit">
+        <input type="submit" value="sign in" id="submit" (click)="onSignIn">
 
-        <a class="need" href="#">Don't have account? Sign up</a>
+        <a class="need" href="./user">Don't have account? Sign up</a>
     </form>
 </body>

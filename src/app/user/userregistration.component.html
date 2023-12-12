@@ -1,23 +1,18 @@
 <body>
     <form action="" class="form">
-      <h2> Registration Form</h2>
-     
-      
-      <input type="text" class="box" name="username" required placeholder="Username">
-      <input type="email"  class="box" name="email" required placeholder="Email">
-      <input type="text"  class="box" name="role" required placeholder="Role">
-      <input type="password"  class="box"name="password" required placeholder="Password">
-      <input type="password" class="box" name="password" required placeholder=" Confirm Password">
-      
-     
-      
+      <h2> Sign Up</h2>
 
+      <input type="text" class="box" name="name" required placeholder="Username" [(ngModel)]="signupObj.userName">
+      <input type="email"  class="box" name="email" required placeholder="Email" [(ngModel)]="signupObj.email">
+      <input type="mobile" class="box" name="mobile" required placeholder="Mobile" [(ngModel)]="signupObj.mobile">
+      <input type="text"  class="box" name="role" required placeholder="Role" [(ngModel)]="signupObj.role">
+      <input type="password"  class="box"name="password" required placeholder="Password" [(ngModel)]="signupObj.password">
+      <input type="password" class="box" name="cnfpassword" required placeholder=" Confirm Password" [(ngModel)]="signupObj.confirmPassword">
 
-      <input type="submit" value="Register" id="submit"> 
+      <a href="./login">if already registered click here to sign in</a>
+
+      <input type="submit" value="Sign up" id="submit" (click)="singupuser(userData)"> 
+
     </form>
   </body>
-
-
-    
-   
-   
+  
