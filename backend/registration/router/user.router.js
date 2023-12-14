@@ -13,6 +13,7 @@ router.get("/fetch",userController.fetch)
 router.delete("/delete",userController.deleteUser)
 router.patch('/update',userController.updateUser);
 router.post('/login',loginValidation,auth.login);
+router.post('/verifyuser',auth.verifyUser);
 
 
 
