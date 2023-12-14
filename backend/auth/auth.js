@@ -115,3 +115,24 @@ export const frogotPassword = async (req, res) => {
     }
 
 }
+
+//.............................................verify user..........................................
+export const verifyUser =async(req,res) =>{
+    try{
+        var user = await userSchemaModel.findOne({ email: req.body.email })
+        if (user) {
+            if(req.body.otp == user.token){
+                userSchemaModel.updateOne({ email: email }, { $set: { "status": 1 } })
+                
+                res.status(200).send({sucess: true, message: "verified"})
+            }else{
+                res.status(500).send({sucess: false, message: "otp does not match"})
+            }
+        }else{
+            res.status(500).send({sucess: false, message: "Please enter registered email address"})
+        }
+
+    }catch(error){
+        res.status(400).send({ sucess: false, message: error.message })
+    }
+}
